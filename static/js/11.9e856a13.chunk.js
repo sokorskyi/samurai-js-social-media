@@ -1,0 +1,2 @@
+(this["webpackJsonpit-kamasutra-js"]=this["webpackJsonpit-kamasutra-js"]||[]).push([[11],{303:function(t,a,s){},308:function(t,a,s){"use strict";s.r(a);var e=s(1),n=s.n(e);s(303);a.default=t=>{let{}=t;return n.a.createElement("div",null,"Settings")}}}]);
+//# sourceMappingURL=11.9e856a13.chunk.js.map
