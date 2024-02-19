@@ -1,0 +1,24 @@
+.messageContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.messageItem {
+  padding: 10px;
+}
+
+.messageItem img {
+  width: 40px;
+}
+
+.myMessages {
+  margin-top: 25px;
+}
+
+.chatMessagesForm {
+
+}
+
+.strangerMessages {
+
+}

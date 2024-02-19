@@ -1,0 +1,17 @@
+.userChatList {
+  color: lightgray;
+}
+
+.chatItem {
+  padding: 10px;
+}
+
+.chatItem a {
+  color: white;
+  text-decoration: none;
+}
+
+.chatItem .active {
+  color: black;
+}
+

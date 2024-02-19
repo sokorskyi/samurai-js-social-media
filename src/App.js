@@ -1,25 +1,58 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Navbar from './components/Navbar/Navbar'
+import MainContent from "./components/MainContent/MainContent";
+import Header from "./components/Header/Header";
+import { compose } from "redux";
+import { connect } from "react-redux";
+import { initApp, selectApp, setGlobalError } from "./redux/reducers/appReducer";
+import Preloader from "./components/UI/Preloader/Preloader";
+import { withRouter } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  
+  handleGlobalRejection = (event) => {
+    this.props.setGlobalError(event.reason.message)
+  }
+
+  componentDidMount() {
+    this.props.initApp()
+    window.addEventListener('unhandledrejection', this.handleGlobalRejection);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('unhandledrejection', this.handleGlobalRejection)
+  }
+
+  render() {
+    return (
+      <div className="app-wrapper">
+        {
+          this.props.isAppInitialized
+          ? <>
+              <Header />
+              <Navbar />
+              <MainContent />
+            </> 
+          : <Preloader /> 
+          }
+      </div>
+    );
+  }
+  
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+  isAppInitialized: selectApp(state).isAppInitialized,
+});
+
+const mapDispatchToProps = {
+  initApp,
+  setGlobalError,
+}
+
+export default compose(
+  withRouter,
+  connect(mapStateToProps, mapDispatchToProps),
+
+)(App);

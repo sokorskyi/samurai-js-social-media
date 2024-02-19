@@ -1,0 +1,12 @@
+.banner img {
+  width: 800px;
+  height: 120px;
+}
+
+.avatar img {
+  width: 50px;
+}
+
+.item {
+  color: red;
+}

@@ -1,0 +1,26 @@
+.profileInfo {
+  padding: 10px;
+  display: flex;
+  gap: 15px;
+}
+
+.avatar img {
+  width: 80px;
+}
+
+.banner {
+  padding: 10px;
+}
+
+.banner img {
+  width: 100%;
+  height: 120px;
+}
+
+.contactItem {
+  padding-left: 20px;
+}
+
+.profileDescription {
+  margin-top: 20px;
+}
