@@ -7,7 +7,7 @@ const SET_IS_APP_INITIALIZED = 'auth/SET_IS_APP_INITIALIZED'
 const SET_GLOBAL_ERROR = 'auth/SET_GLOBAL_ERROR'
 
 const initialState = {
-  isAppInitialized: false,
+  isAppInitialized: true,
   globalError: null,
 }
 

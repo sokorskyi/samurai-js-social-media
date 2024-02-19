@@ -16,7 +16,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.props.initApp()
+    // this.props.initApp()
     window.addEventListener('unhandledrejection', this.handleGlobalRejection);
   }
 
