@@ -2,7 +2,7 @@
   "name": "it-kamasutra-js",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/sokorskyi/samurai-js-social-media",
+  "homepage": "https://sokorskyi.github.io/samurai-js-social-media",
   "dependencies": {
     "@redux-devtools/extension": "^3.3.0",
     "axios": "^1.6.5",
